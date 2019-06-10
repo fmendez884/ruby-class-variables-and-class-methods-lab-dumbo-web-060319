@@ -29,10 +29,7 @@ class Song
   end 
   
   def self.genre_count 
-    genre_count = {}
-    @@genres.each do |genre|
-    binding.pry
-    end
+    @@genres.uniq.map { |x| [x, arr.count(x)] }.to_h
   end 
   
   def self.artist_count 
